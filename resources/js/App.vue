@@ -15,11 +15,15 @@ export default {
 <template>
     <Header />
 
-  <router-view></router-view>
+    <main>
+        <div class="container">
+            <router-view></router-view>
+        </div>
+    </main>
 </template>
 
 
 
-<style>
-
+<style lang="scss">
+@use '../scss/appVue.scss';
 </style>

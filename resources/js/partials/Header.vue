@@ -10,8 +10,9 @@ export default {
     <div class="logo">Boolpress</div>
     <ul>
         <li><router-link :to="{ name:'home' }">Home</router-link></li>
-        <li><router-link :to="{ name:'about' }">Chi Siamo</router-link></li>
-        <li><router-link :to="{ name:'contacts' }">Contatti</router-link></li>
+        <li><router-link :to="{ name:'projects' }">Progetti</router-link></li>
+        <li><router-link :to="{ name:'contacts' }">Chi Siamo</router-link></li>
+        <li><router-link :to="{ name:'about' }">Contatti</router-link></li>
 
     </ul>
   </header>
