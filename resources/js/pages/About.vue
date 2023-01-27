@@ -1,12 +1,11 @@
 <script>
 export default {
-    name: 'App'
+    name: 'About'
 }
 </script>
 
-
 <template>
-  <h1>App</h1>
+  <h1>About</h1>
 </template>
 
 
