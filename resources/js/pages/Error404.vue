@@ -1,13 +1,11 @@
 <script>
 export default {
-    name: 'App'
+    name: 'Error404'
 }
 </script>
 
-
 <template>
-
-  <router-view></router-view>
+  <h1>Errore 404</h1>
 </template>
 
 
