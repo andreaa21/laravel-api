@@ -9,7 +9,9 @@ export default {
 
 <template>
     <div class="card">
-        <h3>{{ project.name }}</h3>
+        <h3>
+            <router-link :to="{name: 'project_detail', params:{slug: project.id}}"> {{ project.name}} </router-link>
+        </h3>
         <h5 class="client">{{ project.client_name }}</h5>
         <div class="card-text">
             <div class="badges">
@@ -32,6 +34,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+a{
+    text-decoration: none;
+    color: white;
+    &:hover{
+        text-decoration: underline;
+    }
+}
     .card{
         padding: 1rem;
         // background-color: rgb(209, 209, 209);
@@ -41,6 +50,7 @@ export default {
         height: 400px;
         overflow: hidden;
         margin: 1rem;
+        cursor: pointer;
         h3{
             text-transform: uppercase;
         }
