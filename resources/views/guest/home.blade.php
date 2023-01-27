@@ -1,5 +1,5 @@
 @extends('layouts.guest')
 
 @section('content')
-    <h1>guest</h1>
+    <div id="app">Vue</div>
 @endsection
