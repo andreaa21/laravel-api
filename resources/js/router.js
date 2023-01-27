@@ -15,19 +15,14 @@ const router = createRouter({
             component: Home
         },
         {
+            path: '/chi-siamo',
+            name: 'about',
+            component: About
+        },
+        {
             path: '/contatti',
             name: 'contacts',
             component: Contacts
-        },
-        {
-            path: '/chi-siamo',
-            name: 'About',
-            component: About
-        },
-        {
-            path: '/chi-siamo',
-            name: 'About',
-            component: About
         },
         {
             path: '/:pathMatch(.*)*',
