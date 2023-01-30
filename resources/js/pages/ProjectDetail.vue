@@ -8,7 +8,7 @@ export default {
     name: 'ProjectDetail',
     data(){
         return{
-            project: null
+            project: []
         }
     },
     methods:{
@@ -16,7 +16,7 @@ export default {
             axios.get(baseUrl + 'project/' + this.$route.params.slug)
                 .then((result) => { 
                     this.project = result.data;
-                    console.log(result);
+                    console.log(this.project);
             })
         }
     },
@@ -27,12 +27,11 @@ export default {
 </script>
 
 <template>
-    <h5>ciao</h5>
 
-    <!-- <h1>{{ project.name }}</h1> -->
+     <h1>{{ project.name }}</h1> 
 
-    <!-- <p>{{ project.client_name }}</p>
-    <div v-html="project.summary"></div> -->
+    <p>{{ project.client_name }}</p>
+    <div v-html="project.summary"></div> 
 </template>
 
 

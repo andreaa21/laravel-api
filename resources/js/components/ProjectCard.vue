@@ -16,7 +16,7 @@ export default {
         <div class="card-text">
             <div class="badges">
 
-                <span class="category">{{ project.category.name }}</span>
+                <!-- <span class="category">{{ project.category.name }}</span> -->
 
                 <div class="technologies">
                 <ul

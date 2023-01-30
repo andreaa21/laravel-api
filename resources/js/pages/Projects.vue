@@ -2,25 +2,27 @@
 
 import axios from 'axios';
 import ProjectCard from '../components/ProjectCard.vue';
-
+import FormSearch from '../components/FormSearch.vue';
+import { store } from '../data/store';
 
 export default {
   name: 'Projects',
   components:{
-    ProjectCard
+    ProjectCard,
+    FormSearch
   },
   data(){
     return{
       baseUrl: 'http://127.0.0.1:8000/api/',
-      projects: []
+      store
     }
   },
   methods:{
     getApi(){
       axios.get(this.baseUrl + 'projects')
           .then(result => {
-            this.projects = result.data.projects;
-            console.log(this.projects);
+            store.projects = result.data.projects;
+            console.log(store.projects);
           })
     }
   },
@@ -33,9 +35,11 @@ export default {
 <template>
 <h1>Progetti</h1>
 
+<FormSearch />
+
 <div class="card-container">
     <ProjectCard
-        v-for="project in projects" :key="project.id"
+        v-for="project in store.projects" :key="project.id"
         :project = "project"
       />
 </div>
